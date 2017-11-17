@@ -1,0 +1,9 @@
+// import Nebular Theme System and the default theme
+@import '~@nebular/theme/styles/theming';
+@import '~@nebular/theme/styles/themes/default';
+
+$nb-themes: nb-register-theme((
+  // color-bg: gray,
+  // color-fg: white,
+
+), default, default);
