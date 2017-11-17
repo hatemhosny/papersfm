@@ -24,7 +24,6 @@
       "test": "../../../test.js",
       "tsconfig": "../../../tsconfig.app.json",
       "testTsconfig": "../../../tsconfig.spec.json",
-      "prefix": "app",
       "styles": [
         "../../../node_modules/bootstrap/dist/css/bootstrap.css",
         "../../../node_modules/typeface-exo/index.css",
@@ -36,10 +35,13 @@
         "../../../node_modules/pace-js/templates/pace-theme-flash.tmpl.css",
         "app/@theme/styles/styles.scss"
       ],
-      "scripts": [],
+      "scripts": [
+        "../node_modules/pace-js/pace.min.js"
+      ],
       "environmentSource": "environments/environment.ts",
       "environments": {
         "dev": "environments/environment.ts",
+        "stag": "environments/environment.stag.ts",
         "prod": "environments/environment.prod.ts"
       }
     }
