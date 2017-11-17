@@ -1,5 +1,7 @@
 {
   "files.exclude": {
     "apps/mobile/app/**/*.js": true
-  }
+  },
+  "typescript.tsdk": "./node_modules/typescript/lib",
+  "tslint.enable": true
 }

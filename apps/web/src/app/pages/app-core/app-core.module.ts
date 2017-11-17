@@ -8,7 +8,7 @@ import { NotificationService } from './notification/notification.service';
 import { NotificationComponent } from './notification/notification.component';
 import { LogService } from './log/log.service';
 import { DataService } from './data/data.service';
-import { BreadcrumbsService } from '../app-shared/breadcrumbs/breadcrumbs.service';
+import { BreadcrumbsService } from '../../@shared/breadcrumbs/breadcrumbs.service';
 
 @NgModule({
   imports: [

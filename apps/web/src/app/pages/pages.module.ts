@@ -5,7 +5,7 @@ import { PagesRoutingModule } from './pages-routing.module';
 import { ThemeModule } from '../@theme/theme.module';
 import { HomeComponent } from './home/home.component';
 import { DashboardModule } from './dashboard/dashboard.module';
-import { SharedModule } from './app-shared/app-shared.module';
+import { SharedModule } from '../@shared/shared.module';
 
 @NgModule({
   imports: [
