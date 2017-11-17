@@ -2,9 +2,9 @@ import { Component, OnInit } from '@angular/core';
 
 @Component({
   selector: 'pfm-app-core',
-  templateUrl: './app-core.component.html',
+  template: '<ngx-notification></ngx-notification>',
 })
-export class AppCoreComponent implements OnInit {
+export class CoreComponent implements OnInit {
 
   constructor() { }
 

@@ -11,11 +11,10 @@ import { HttpModule } from '@angular/http';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 
 import { CoreModule } from './@core/core.module';
-import { AppCoreModule } from './pages/app-core';
 import { AppComponent } from './app.component';
 import { AppRoutingModule } from './app-routing.module';
 import { ThemeModule } from './@theme/theme.module';
-import { NotificationComponent } from './pages/app-core/notification/notification.component';
+import { NotificationComponent } from './@core/notification/notification.component';
 
 @NgModule({
   declarations: [AppComponent],
@@ -28,7 +27,6 @@ import { NotificationComponent } from './pages/app-core/notification/notificatio
     NgbModule.forRoot(),
     ThemeModule.forRoot(),
     CoreModule.forRoot(),
-    AppCoreModule,
   ],
   bootstrap: [AppComponent],
   providers: [

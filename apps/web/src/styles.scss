@@ -1,9 +1,0 @@
-@import './app/styles/themes';
-
-// nebular component styles
-@import '~@nebular/theme/styles/globals';
-
-// install theme framework
-@include nb-install() {
-  @include nb-theme-global();
-};

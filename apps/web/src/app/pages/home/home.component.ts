@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 
-import { NotificationService } from '../app-core/notification/notification.service';
+import { NotificationService } from '../../@core/notification/notification.service';
 import {environment} from '../../../environments/environment';
 
 @Component({

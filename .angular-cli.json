@@ -44,6 +44,18 @@
         "stag": "environments/environment.stag.ts",
         "prod": "environments/environment.prod.ts"
       }
+    },
+    {
+      "name": "data",
+      "root": "libs\\data\\src",
+      "test": "../../../test.js",
+      "appRoot": ""
+    },
+    {
+      "name": "log",
+      "root": "libs\\log\\src",
+      "test": "../../../test.js",
+      "appRoot": ""
     }
   ],
   "e2e": {
