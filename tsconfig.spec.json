@@ -19,6 +19,7 @@
     "**/*.ts"
   ],
   "exclude": [
+    "apps/mobile",
     "node_modules",
     "tmp"
   ]

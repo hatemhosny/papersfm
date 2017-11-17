@@ -17,6 +17,7 @@
     }
   },
   "exclude": [
+    "apps/mobile",    
     "**/*.spec.ts",
     "node_modules",
     "tmp"
