@@ -21,4 +21,4 @@ import { BreadcrumbsComponent } from './breadcrumbs/breadcrumbs.component';
     BreadcrumbsComponent,
   ],
 })
-export class AppSharedModule { }
+export class SharedModule { }

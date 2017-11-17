@@ -1,24 +1,24 @@
 import { CUSTOM_ELEMENTS_SCHEMA, NgModule } from '@angular/core';
 
-import { AppPagesComponent } from './app-pages.component';
-import { AppPagesRoutingModule } from './app-pages-routing.module';
+import { PagesComponent } from './pages.component';
+import { PagesRoutingModule } from './pages-routing.module';
 import { ThemeModule } from '../@theme/theme.module';
 import { HomeComponent } from './home/home.component';
 import { DashboardModule } from './dashboard/dashboard.module';
-import { AppSharedModule } from './app-shared/app-shared.module';
+import { SharedModule } from './app-shared/app-shared.module';
 
 @NgModule({
   imports: [
-    AppPagesRoutingModule,
+    PagesRoutingModule,
     ThemeModule,
     DashboardModule,
-    AppSharedModule,
+    SharedModule,
   ],
   declarations: [
-    AppPagesComponent,
+    PagesComponent,
     HomeComponent,
   ],
   schemas: [ CUSTOM_ELEMENTS_SCHEMA ],
 })
-export class AppPagesModule {
+export class PagesModule {
 }

@@ -4,7 +4,7 @@ import { NgModule } from '@angular/core';
 
 const routes: Routes = [{
   path: '',
-  loadChildren: './app-pages/app-pages.module#AppPagesModule',
+  loadChildren: './pages/pages.module#PagesModule',
   },
   { path: '**', redirectTo: '' },
 ];

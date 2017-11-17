@@ -1,6 +1,6 @@
 import { Component } from '@angular/core';
 
-import { MENU_ITEMS } from './app-pages-menu';
+import { MENU_ITEMS } from './pages-menu';
 
 @Component({
   selector: 'ngx-app-pages',
@@ -12,7 +12,7 @@ import { MENU_ITEMS } from './app-pages-menu';
     </ngx-sample-layout>
   `,
 })
-export class AppPagesComponent {
+export class PagesComponent {
 
   menu = MENU_ITEMS;
 
