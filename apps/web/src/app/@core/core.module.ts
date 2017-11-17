@@ -5,12 +5,11 @@ import { ToasterModule } from 'angular2-toaster';
 
 
 import { throwIfAlreadyLoaded } from './module-import-guard';
-import { DataModule } from './data/data.module';
+import { DataModule } from '@papersfm/data';
 import { AnalyticsService } from './utils/analytics.service';
 
 import { CoreComponent } from './core.component';
 import { LogService } from '@papersfm/log';
-import { DataService } from '@papersfm/data';
 import { NotificationService } from './notification/notification.service';
 import { NotificationComponent } from './notification/notification.component';
 import { BreadcrumbsService } from '../@shared/breadcrumbs/breadcrumbs.service';
@@ -22,7 +21,6 @@ const NB_CORE_PROVIDERS = [
   LogService,
   { provide: ErrorHandler, useExisting: LogService },
   NotificationService,
-  DataService,
   BreadcrumbsService,
 ];
 

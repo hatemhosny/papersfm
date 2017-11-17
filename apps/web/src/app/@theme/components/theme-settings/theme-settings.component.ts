@@ -1,6 +1,6 @@
 import { Component, Input, OnInit } from '@angular/core';
 
-import { StateService } from '../../../@core/data/state.service';
+import { StateService } from '@papersfm/data';
 
 @Component({
   selector: 'ngx-theme-settings',

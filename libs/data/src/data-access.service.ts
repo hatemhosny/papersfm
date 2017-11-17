@@ -16,7 +16,7 @@ type CollectionPredicate<T> = string | AngularFirestoreCollection<T>;
 type DocPredicate<T> = string | AngularFirestoreDocument<T>;
 
 @Injectable()
-export class DataService {
+export class DataAccessService {
   constructor(public afs: AngularFirestore) { }
   /// **************
   /// Get a Reference
