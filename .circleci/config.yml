@@ -1,0 +1,89 @@
+# Javascript Node CircleCI 2.0 configuration file
+#
+# Check https://circleci.com/docs/2.0/language-javascript/ for more details
+#
+version: 2
+jobs:
+  build:
+    docker:
+      # specify the version you desire here
+      - image: circleci/node:8.9.1-browsers
+
+    # parallelism: 4
+    working_directory: ~/papersfm
+
+    steps:
+      - checkout
+
+      # Download and cache dependencies
+      - restore_cache:
+          keys:
+          - v1-{{ .Branch }}-{{ checksum "package.json" }}
+          # fallback to using the latest cache if no exact match is found
+          - v1-{{ .Branch }}-
+
+      - run:
+          name: install-dependencies
+          command: npm install
+
+      - save_cache:
+          paths:
+            - node_modules
+          key: v1-{{ .Branch }}-{{ checksum "package.json" }}
+
+      - run:
+          name: angular-build
+          command: |
+            if [ "${CIRCLE_BRANCH}" == "develop" ]; then
+              npm run build:dev:aot
+            fi
+            if [ "${CIRCLE_BRANCH}" == "master" ]; then
+              npm run build:stag:aot
+            fi
+            if [[ "${CIRCLE_BRANCH}" == release* ]]; then
+              npm run build:prod:aot
+            fi
+
+      - run:
+          name: angular-test
+          command: mkdir test-results && npm test -- --watch=false
+
+      - store_artifacts:
+          path: ./test-results/test-results.xml
+          prefix: tests
+
+      - run:
+          name: angular-lint
+          command: npm run lint:ci
+
+      # - store_artifacts:
+      #     path: ./test-results/tslint.xml
+      #     prefix: lint
+
+      - store_test_results:
+          path: ./test-results
+
+      - run:
+          name: copy-firebase.json
+          command: cp firebase.json ./dist/firebase.json
+
+      - deploy:
+          name: Deploy Develop branch to Firebase-development
+          command: |
+            if [ "${CIRCLE_BRANCH}" == "develop" ]; then
+              ./node_modules/.bin/firebase deploy -P development --token=$FIREBASE_DEPLOY_TOKEN
+            fi
+
+      - deploy:
+          name: Deploy Master branch to Firebase-staging
+          command: |
+            if [ "${CIRCLE_BRANCH}" == "master" ]; then
+              ./node_modules/.bin/firebase deploy -P staging --token=$FIREBASE_DEPLOY_TOKEN
+            fi
+
+      - deploy:
+          name: Deploy Release branch to Firebase-production
+          command: |
+            if [[ "${CIRCLE_BRANCH}" == release* ]]; then
+              ./node_modules/.bin/firebase deploy -P production --token=$FIREBASE_DEPLOY_TOKEN
+            fi
