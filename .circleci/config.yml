@@ -106,7 +106,7 @@ jobs:
           
       - run:
           name: Prepare Android Build
-          command: cd apps/mobile && yes y | tns prepare android
+          command: cd apps/mobile && yes y | tns prepare android --info
 
       - run:
           name: Build Android
