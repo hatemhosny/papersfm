@@ -7,7 +7,7 @@
   "apps": [
     {
       "name": "web",
-      "root": "apps\\web\\src",
+      "root": "apps/web/src",
       "outDir": "dist/apps/web",
       "assets": [
         "assets",
@@ -47,13 +47,13 @@
     },
     {
       "name": "data",
-      "root": "libs\\data\\src",
+      "root": "libs/data/src",
       "test": "../../../test.js",
       "appRoot": ""
     },
     {
       "name": "log",
-      "root": "libs\\log\\src",
+      "root": "libs/log/src",
       "test": "../../../test.js",
       "appRoot": ""
     }
