@@ -1,0 +1,77 @@
+<p>
+    Environment: {{environmentName}}
+  </p>
+  <p class="row">
+    <button class="btn btn-primary" (click)="showNotification()">Show Notification</button>
+  </p>
+  <div class="row">
+    <div class="col-xl-6 col-sm-12">
+      <pfm-reveal-card>
+        <pfm-card class="card-front" accent="warning">
+          <pfm-card-header>Reveal Card</pfm-card-header>
+          <pfm-card-body>
+            <p>some text</p>
+            <p>some text</p>
+            <p>some text</p>
+            <p>some text</p>
+            <p>some text</p>
+          </pfm-card-body>
+          <pfm-card-footer>footer</pfm-card-footer>
+        </pfm-card>
+        <pfm-card class="card-back">
+          <pfm-card-body>
+            <p>some text</p>
+            <p>some text</p>
+            <p>some text</p>
+            <p>some text</p>
+            <p>some text</p>
+          </pfm-card-body>
+        </pfm-card>
+      </pfm-reveal-card>
+    </div>
+    <div class="col-xl-6 col-sm-12">
+      <pfm-flip-card size="medium">
+        <pfm-card class="card-front" accent="info">
+          <pfm-card-header>Flip Card</pfm-card-header>
+          <pfm-card-body>
+            <p>some text</p>
+            <p>some text</p>
+            <p>some text</p>
+            <p>some text</p>
+            <p>some text</p>
+          </pfm-card-body>
+          <pfm-card-footer>footer</pfm-card-footer>
+        </pfm-card>
+        <pfm-card class="card-back">
+          <pfm-card-body>
+            back
+          </pfm-card-body>
+        </pfm-card>
+      </pfm-flip-card>
+    </div>
+
+    <div class="col-xl-6 col-sm-12">
+      <pfm-card accent="success">
+        <pfm-card-header>Generic Card</pfm-card-header>
+        <pfm-card-body>
+          <p>some text</p>
+          <p>some text</p>
+          <p>some text</p>
+          <p>some text</p>
+          <p>some text</p>
+      </pfm-card-body>
+        <pfm-card-footer>footer</pfm-card-footer>
+      </pfm-card>
+    </div>
+
+    <div class="col-xl-6 col-sm-12">
+      <pfm-card accent="danger">
+        <pfm-card-header>Generic Card</pfm-card-header>
+        <pfm-card-body>
+          my new card
+        </pfm-card-body>
+        <pfm-card-footer>footer</pfm-card-footer>
+      </pfm-card>
+    </div>
+
+  </div>

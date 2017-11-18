@@ -1,13 +1,24 @@
-import { Component, OnInit, ViewEncapsulation } from '@angular/core';
+/**
+ * @license
+ * Copyright Akveo. All Rights Reserved.
+ * Licensed under the MIT License. See License.txt in the project root for license information.
+ */
+import { Component, OnInit } from '@angular/core';
+import { AnalyticsService } from './@core/utils/analytics.service';
 
 @Component({
-  selector: 'app-root',
-  templateUrl: './app.component.html',
-  styleUrls: ['./app.component.css'],
-  encapsulation: ViewEncapsulation.None
+  selector: 'ngx-app',
+  template: `
+    <pfm-app-core></pfm-app-core>
+    <router-outlet></router-outlet>
+  `,
 })
 export class AppComponent implements OnInit {
-  constructor() {}
 
-  ngOnInit() {}
+  constructor(private analytics: AnalyticsService) {
+  }
+
+  ngOnInit(): void {
+    this.analytics.trackPageViews();
+  }
 }
