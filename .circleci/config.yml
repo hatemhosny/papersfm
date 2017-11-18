@@ -86,6 +86,16 @@ jobs:
               ./node_modules/.bin/firebase deploy -P production --token=$FIREBASE_DEPLOY_TOKEN
             fi
 
+
+  build-android:
+    docker:
+      - image: kristophjunge/nativescript
+
+    working_directory: ~/papersfm-android
+
+    steps:
+      - checkout
+
       - run:
           name: Install Android Dependencies
           command: cd apps/mobile && npm install
@@ -101,3 +111,14 @@ jobs:
       - store_artifacts:
           path: ./apps/mobile/platforms/android/build/outputs
           prefix: android-outputs
+
+workflows:
+  version: 2
+  build-n-deploy:
+    jobs:
+      - build
+
+      - build-android
+          # filters:
+          #   tags:
+          #     only: /.*android.*/
