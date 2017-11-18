@@ -8,7 +8,7 @@ import {
   NbThemeService,
 } from '@nebular/theme';
 
-import { StateService } from '@papersfm/data';
+import { StateService } from '@app/data';
 
 import { Subscription } from 'rxjs/Subscription';
 import 'rxjs/add/operator/withLatestFrom';

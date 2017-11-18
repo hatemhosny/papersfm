@@ -1,7 +1,7 @@
 import { Component, Input, OnInit } from '@angular/core';
 
 import { NbMenuService, NbSidebarService } from '@nebular/theme';
-import { UserService } from '@papersfm/data';
+import { UserService } from '@app/data';
 import { AnalyticsService } from '../../../@core/utils/analytics.service';
 
 @Component({

@@ -56,6 +56,12 @@
       "root": "libs/log/src",
       "test": "../../../test.js",
       "appRoot": ""
+    },
+    {
+      "name": "notification",
+      "root": "libs/notification/src",
+      "test": "../../../test.js",
+      "appRoot": ""
     }
   ],
   "e2e": {

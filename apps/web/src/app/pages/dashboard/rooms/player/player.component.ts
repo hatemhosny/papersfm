@@ -1,5 +1,5 @@
 import { Component, HostBinding, Input, OnDestroy } from '@angular/core';
-import { PlayerService, Track } from '@papersfm/data';
+import { PlayerService, Track } from '@app/data';
 
 @Component({
   selector: 'ngx-player',

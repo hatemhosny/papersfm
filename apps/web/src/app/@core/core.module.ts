@@ -5,13 +5,12 @@ import { ToasterModule } from 'angular2-toaster';
 
 
 import { throwIfAlreadyLoaded } from './module-import-guard';
-import { DataModule } from '@papersfm/data';
+import { DataModule } from '@app/data';
 import { AnalyticsService } from './utils/analytics.service';
 
 import { CoreComponent } from './core.component';
-import { LogService } from '@papersfm/log';
-import { NotificationService } from './notification/notification.service';
-import { NotificationComponent } from './notification/notification.component';
+import { LogService } from '@app/log';
+import { NotificationService, NotificationComponent } from '@app/notification';
 import { BreadcrumbsService } from '../@shared/breadcrumbs/breadcrumbs.service';
 
 

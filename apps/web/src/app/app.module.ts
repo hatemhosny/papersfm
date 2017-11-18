@@ -14,7 +14,7 @@ import { CoreModule } from './@core/core.module';
 import { AppComponent } from './app.component';
 import { AppRoutingModule } from './app-routing.module';
 import { ThemeModule } from './@theme/theme.module';
-import { NotificationComponent } from './@core/notification/notification.component';
+import { NotificationComponent } from '@app/notification';
 
 @NgModule({
   declarations: [AppComponent],

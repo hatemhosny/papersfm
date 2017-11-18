@@ -1,7 +1,7 @@
 import { Component, OnDestroy, OnInit } from '@angular/core';
 import { NbThemeService, NbMediaBreakpoint, NbMediaBreakpointsService } from '@nebular/theme';
 
-import { UserService } from '@papersfm/data';
+import { UserService } from '@app/data';
 
 @Component({
   selector: 'ngx-contacts',

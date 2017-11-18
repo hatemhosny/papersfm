@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 
-import { NotificationService } from '../../@core/notification/notification.service';
-import {environment} from '../../../environments/environment';
+import { NotificationService } from '@app/notification';
+import { environment } from '../../../environments/environment';
 
 @Component({
   templateUrl: './home.component.html',

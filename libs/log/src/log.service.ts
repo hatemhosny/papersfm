@@ -1,7 +1,7 @@
 import { Injectable, ErrorHandler } from '@angular/core';
 
-import { NotificationService } from '../../../apps/web/src/app/@core/notification/notification.service';
-import { environment } from '../../../apps/web/src/environments/environment';
+import { NotificationService } from '@app/notification';
+import { environment } from 'apps/web/src/environments/environment';
 
 declare let Raven: any;
 
