@@ -51,7 +51,7 @@ jobs:
           prefix: tests
 
       - run:
-          name: Angular Lnt
+          name: Angular Lint
           command: npm run lint:ci
 
       # - store_artifacts:
@@ -90,7 +90,7 @@ jobs:
   Android:
     docker:
       - image: niccolomeloni/docker-nativescript-cli
-      
+
     working_directory: ~/papersfm-android
 
     steps:
@@ -103,7 +103,7 @@ jobs:
       - run:
           name: Add Android Platform
           command: cd apps/mobile && yes y | tns platform add android@3.2 || true  # TODO: fix this
-          
+
       - run:
           name: Prepare Android Build
           command: cd apps/mobile && yes y | tns prepare android  # TODO: and this

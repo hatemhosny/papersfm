@@ -33,6 +33,7 @@
     "precommit": "npm run lint:ci",
     "docs": "compodoc -p src/tsconfig.app.json -d docs",
     "docs:serve": "compodoc -p src/tsconfig.app.json -d docs -s",
+    "firebase": "firebase",
     "conventional-changelog": "conventional-changelog",
     "release:changelog": "npm run conventional-changelog -- -p angular -i CHANGELOG.md -s"
   },
