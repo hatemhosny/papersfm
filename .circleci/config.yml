@@ -7,7 +7,7 @@ jobs:
   build:
     docker:
       # specify the version you desire here
-      - image: circleci/node:8.8.1-stretch-browsers
+      - image: circleci/node:8.9.1-browsers
 
     # parallelism: 4
     working_directory: ~/papersfm
@@ -24,7 +24,7 @@ jobs:
 
       - run:
           name: install-dependencies
-          command: npm run clean && npm install
+          command: npm install && npm i typescript --save-dev
 
       - save_cache:
           paths:
