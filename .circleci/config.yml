@@ -105,10 +105,6 @@ jobs:
           command: cd apps/mobile && npm install --ignore-scripts
 
       - run:
-          name: Agree on {N} Privacy Policy
-          command: tns error-reporting disable
-
-      - run:
           name: Add Android Platform
           command: cd apps/mobile && yes y | tns platform add android
 
