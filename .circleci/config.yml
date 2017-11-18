@@ -101,10 +101,6 @@ jobs:
           command: npm install
 
       - run:
-          name: Install Android Dependencies
-          command: cd apps/mobile && npm install --ignore-scripts && npm i --save-dev typescript@2.5.3
-
-      - run:
           name: Add Android Platform
           command: cd apps/mobile && yes y | tns platform add android
 
