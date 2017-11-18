@@ -19,6 +19,7 @@
     "build:prod:aot": "npm run build:prod -- --aot",
     "build:sourcemaps": "npm run build:prod:aot -- --vendor-chunk=false --sourcemaps",
     "build:prod:ci": "npm-run-all -p -r build:prod build:prod:aot",
+    "build:android": "cd apps/mobile && tns prepare android && tns build android",
     "clean": "rimraf node_modules && npm cache clean --force",
     "test": "ng test -sr",
     "test:coverage": "rimraf coverage && npm run test -- -cc",

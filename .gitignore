@@ -6,6 +6,7 @@
 /out-tsc
 /docs
 /test-results
+/apps/mobile/app/**/*.js
 
 # dependencies
 node_modules
