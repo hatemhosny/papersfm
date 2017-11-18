@@ -18,13 +18,13 @@ jobs:
       # Download and cache dependencies
       - restore_cache:
           keys:
-          - v1-{{ .Branch }}-{{ checksum "package.json" }}
+          - v1-test-{{ .Branch }}-{{ checksum "package.json" }}
           # fallback to using the latest cache if no exact match is found
-          - v1-{{ .Branch }}-
+          - v1-test-{{ .Branch }}-
 
       - run:
           name: install-dependencies
-          command: npm install
+          command: npm run clean && npm install
 
       - save_cache:
           paths:
