@@ -87,9 +87,9 @@ jobs:
             fi
 
 
-  build-android:
+  Android:
     docker:
-      - image: rwstauner/nativescript
+      - image: niccolomeloni/docker-nativescript-cli
 
     working_directory: ~/papersfm-android
 
@@ -122,4 +122,4 @@ workflows:
     jobs:
       - build
 
-      - build-android
+      - Android
