@@ -5,6 +5,8 @@
 /tmp
 /out-tsc
 /docs
+/test-results
+
 # dependencies
 node_modules
 
