@@ -89,7 +89,7 @@ jobs:
 
   Android:
     docker:
-      - image: promact/nativescript-android-docker
+      - image: atende/nativescript
       
     working_directory: ~/papersfm-android
 
