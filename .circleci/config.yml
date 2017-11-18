@@ -89,7 +89,7 @@ jobs:
 
   Android:
     docker:
-      - image: abarbu/stack-ghcjs-nativescript
+      - image: richtwert/docker-nativescript-android
       
     working_directory: ~/papersfm-android
 
