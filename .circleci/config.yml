@@ -24,7 +24,7 @@ jobs:
 
       - run:
           name: install-dependencies
-          command: npm run clean && npm install
+          command: rm -rf node_modules && npm cache verify && npm install
 
       - save_cache:
           paths:
