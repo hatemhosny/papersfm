@@ -97,6 +97,10 @@ jobs:
       - checkout
 
       - run:
+          name: Install Angular Dependencies
+          command: npm install
+
+      - run:
           name: Install Android Dependencies
           command: cd apps/mobile && npm install
 
