@@ -65,7 +65,7 @@
     },
     {
       "name": "svg-icon",
-      "root": "libs\\svg-icon\\src",
+      "root": "libs/svg-icon/src",
       "test": "../../../test.js",
       "appRoot": ""
     }
