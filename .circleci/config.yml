@@ -89,7 +89,7 @@ jobs:
 
   Android:
     docker:
-      - image: oreng/nativescript
+      - image: promact/nativescript-android-docker
       
     working_directory: ~/papersfm-android
 
