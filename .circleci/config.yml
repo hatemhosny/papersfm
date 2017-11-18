@@ -102,7 +102,7 @@ jobs:
 
       - run:
           name: Add Android Platform
-          command: cd apps/mobile && yes y | tns platform add android
+          command: cd apps/mobile && yes y | tns platform add android || true
 
       - run:
           name: Android Build
