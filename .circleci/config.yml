@@ -89,7 +89,7 @@ jobs:
 
   Android:
     docker:
-      - image: richtwert/docker-nativescript-android
+      - image: kristophjunge/nativescript
       
     working_directory: ~/papersfm-android
 
