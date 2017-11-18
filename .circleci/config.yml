@@ -89,7 +89,7 @@ jobs:
 
   Android:
     docker:
-      - image: m1burn/nativescript
+      - image: anhvupham/nativescript-ubuntu
       
     working_directory: ~/papersfm-android
 
