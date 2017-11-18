@@ -1,0 +1,10 @@
+.svg-icon {
+  position: relative;
+  display: inline-block;
+}
+
+::ng-deep svg {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+}

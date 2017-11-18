@@ -63,6 +63,7 @@
     "font-awesome": "^4.7.0",
     "ionicons": "^2.0.1",
     "nebular-icons": "^1.0.6",
+    "ng-inline-svg": "^5.0.0",
     "pace-js": "^1.0.2",
     "raven-js": "^3.20.1",
     "roboto-fontface": "^0.8.0",
