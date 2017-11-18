@@ -24,7 +24,7 @@ jobs:
 
       - run:
           name: install-dependencies
-          command: npm install
+          command: npm i typescript -g && npm install
 
       - save_cache:
           paths:
