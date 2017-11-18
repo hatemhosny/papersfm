@@ -102,11 +102,11 @@ jobs:
 
       - run:
           name: Install Android Dependencies
-          command: cd apps/mobile && npm install
+          command: cd apps/mobile && npm install --ignore-scripts
 
       - run:
           name: Add Android Platform
-          command: cd apps/mobile && yes Y | tns --version && tns error-reporting disable && tns platform add android
+          command: cd apps/mobile && tns error-reporting disable && tns --version && tns platform add android
 
       - run:
           name: Android Build
