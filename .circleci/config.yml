@@ -23,7 +23,7 @@ jobs:
           - v1-{{ .Branch }}-
 
       - run:
-          name: install-dependencies
+          name: Install Dependencies
           command: npm install
 
       - save_cache:
@@ -32,7 +32,7 @@ jobs:
           key: v1-{{ .Branch }}-{{ checksum "package.json" }}
 
       - run:
-          name: angular-build
+          name: Angular Build
           command: |
             if [ "${CIRCLE_BRANCH}" == "develop" ]; then
               npm run build:dev:aot
@@ -43,7 +43,7 @@ jobs:
             fi
 
       - run:
-          name: angular-test
+          name: Angular Test
           command: mkdir test-results && npm test -- --watch=false
 
       - store_artifacts:
@@ -51,7 +51,7 @@ jobs:
           prefix: tests
 
       - run:
-          name: angular-lint
+          name: Angular Lnt
           command: npm run lint:ci
 
       # - store_artifacts:
@@ -62,7 +62,7 @@ jobs:
           path: ./test-results
 
       - run:
-          name: copy-firebase.json
+          name: Copy firebase.json
           command: cp firebase.json ./dist/firebase.json
 
       - deploy:
@@ -87,7 +87,7 @@ jobs:
             fi
 
       - run:
-          name: Build android
+          name: Android Build
           command: |
             if [[ "${CIRCLE_TAG}" == *android* ]]; then
               npm run build:android
