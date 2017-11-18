@@ -89,8 +89,8 @@ jobs:
 
   Android:
     docker:
-      - image: ufel/docker-nativescript
-
+      - image: oreng/nativescript
+      
     working_directory: ~/papersfm-android
 
     steps:
