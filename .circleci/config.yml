@@ -89,7 +89,7 @@ jobs:
 
   build-android:
     docker:
-      - image: kristophjunge/nativescript
+      - image: rwstauner/nativescript
 
     working_directory: ~/papersfm-android
 
@@ -123,6 +123,3 @@ workflows:
       - build
 
       - build-android
-          # filters:
-          #   tags:
-          #     only: /.*android.*/
