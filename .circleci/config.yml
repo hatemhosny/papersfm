@@ -106,11 +106,11 @@ jobs:
 
       - run:
           name: Agree on {N} Privacy Policy
-          command: printf 'y\ny\n' | tns --version
+          command: tns error-reporting disable
 
       - run:
           name: Add Android Platform
-          command: cd apps/mobile && tns error-reporting disable && tns platform add android
+          command: cd apps/mobile && yes y | tns platform add android
 
       - run:
           name: Android Build
