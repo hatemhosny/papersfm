@@ -87,6 +87,14 @@ jobs:
             fi
 
       - run:
+          name: Install Android Dependencies
+          command: cd apps/mobile && npm install
+
+      - run:
+          name: Add Android Platform
+          command: cd apps/mobile && tns platform add android
+
+      - run:
           name: Android Build
           command: npm run build:android
 
