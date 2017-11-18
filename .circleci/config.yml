@@ -89,7 +89,7 @@ jobs:
 
   Android:
     docker:
-      - image: ashtreecc/nativescript
+      - image: ufel/docker-nativescript
 
     working_directory: ~/papersfm-android
 
