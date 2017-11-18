@@ -105,8 +105,13 @@ jobs:
           command: cd apps/mobile && yes y | tns platform add android || true
 
       - run:
-          name: Android Build
-          command: npm run build:android
+          name: Prepare Android Build
+          command: cd apps/mobile && yes y | tns prepare android
+
+      - run:
+          name: Build Android
+          command: cd apps/mobile && yes y | tns android build --release
+
 
       - store_artifacts:
           path: ./apps/mobile/platforms/android/build/outputs
