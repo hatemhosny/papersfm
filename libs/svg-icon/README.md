@@ -26,7 +26,7 @@ Provides a component to embed inline SVG icons
 
 - Apply styles:
 ```css
-::ng-deep .svg-icon {
+/deep/ .svg-icon {
   fill: darkgrey;
   height: 2em;
   width: 2em;

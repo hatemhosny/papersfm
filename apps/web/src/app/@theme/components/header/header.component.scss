@@ -32,7 +32,7 @@
     align-items: center;
   }
 
-  .control-item.fullscreen ::ng-deep i {
+  .control-item.fullscreen /deep/ i {
     font-size: nb-theme(actions-size-small);
   }
 
