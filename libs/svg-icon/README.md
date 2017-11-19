@@ -1,4 +1,5 @@
-**SvgIconModule**
+# SvgIconModule
+
 
 Provides a component to embed inline SVG icons 
 
