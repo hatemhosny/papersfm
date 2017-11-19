@@ -1,0 +1,12 @@
+.svg-icon {
+  position: relative;
+  display: inline-block;
+}
+
+/* stylelint-disable selector-pseudo-element-no-unknown  */
+::ng-deep svg {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+}
+/* stylelint-enable */

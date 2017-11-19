@@ -1,0 +1,19 @@
+/* stylelint-disable selector-pseudo-element-no-unknown  */
+::ng-deep .svg-icon {
+  fill: grey;
+  height: 2em;
+  width: 2em;
+  transition: all 0.3s ease-out;
+}
+
+::ng-deep .svg-icon:hover {
+  fill: black;
+  height: 2.5em;
+  width: 2.5em;
+}
+/* stylelint-enable */
+
+pfm-icon {
+  margin: 0.5em;
+  padding: 0.5em;
+}

@@ -62,6 +62,12 @@
       "root": "libs/notification/src",
       "test": "../../../test.js",
       "appRoot": ""
+    },
+    {
+      "name": "svg-icon",
+      "root": "libs/svg-icon/src",
+      "test": "../../../test.js",
+      "appRoot": ""
     }
   ],
   "e2e": {
