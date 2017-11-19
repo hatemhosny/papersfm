@@ -27,6 +27,15 @@
     display: block;
   }
 
+  nb-action.fullscreen {
+    display: flex;
+    align-items: center;
+  }
+
+  .control-item.fullscreen ::ng-deep i {
+    font-size: nb-theme(actions-size-small);
+  }
+
   .header-container {
     display: flex;
     align-items: center;
