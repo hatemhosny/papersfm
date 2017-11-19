@@ -1,12 +1,12 @@
 /* stylelint-disable selector-pseudo-element-no-unknown  */
-:host ::ng-deep .svg-icon {
+::ng-deep .svg-icon {
   fill: grey;
   height: 2em;
   width: 2em;
   transition: all 0.3s ease-out;
 }
 
-:host ::ng-deep .svg-icon:hover {
+::ng-deep .svg-icon:hover {
   fill: black;
   height: 2.5em;
   width: 2.5em;
