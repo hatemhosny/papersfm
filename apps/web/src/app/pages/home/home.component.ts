@@ -15,10 +15,7 @@ export class HomeComponent implements OnInit {
 
   posts: Post[];
 
-  constructor(
-    private notificationService: NotificationService,
-    private http: HttpClient,
-  ) {}
+  constructor(private notificationService: NotificationService, private http: HttpClient) {}
 
   ngOnInit() {
     this.environmentName = environment.name;
