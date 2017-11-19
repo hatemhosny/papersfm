@@ -4,16 +4,21 @@ import { HttpClient, HttpErrorResponse } from '@angular/common/http';
 import { NotificationService } from '@app/notification';
 import { environment } from '../../../environments/environment';
 import { Observable } from 'rxjs/Observable';
+import 'rxjs/add/operator/retry';
 
 @Component({
   templateUrl: './home.component.html',
   styleUrls: ['./home.component.scss'],
 })
 export class HomeComponent implements OnInit {
-
   environmentName: string;
 
-  constructor(private notificationService: NotificationService, private http: HttpClient) { }
+  posts: Post[];
+
+  constructor(
+    private notificationService: NotificationService,
+    private http: HttpClient,
+  ) {}
 
   ngOnInit() {
     this.environmentName = environment.name;
@@ -24,25 +29,28 @@ export class HomeComponent implements OnInit {
   }
 
   sendRequest() {
-  this.http.get<Post[]>('https://jsonplaceholder.typicode.com/posts')
-  .subscribe(
+    this.http
+      .get<Post[]>('https://jsonplaceholder.typicode.com/posts')
+      // Retry this request up to 3 times.
+      .retry(3)
+      .subscribe(
         data => {
-          data.forEach(item => {
-            console.log('User ID: ' + item.userId);
-            console.log('Title: ' + item.title);
-            console.log('Body: ' + item.body);
-          });
+          this.posts = data;
+          this.notificationService.success('Data fetched!');
         },
         (err: HttpErrorResponse) => {
           if (err.error instanceof Error) {
-            console.log('Client-side error occured.');
+            // A client-side error occurred. Handle it accordingly.
+            this.notificationService.error('Client-side error: ' + err.error.message);
           } else {
-            console.log('Server-side error occured.');
+            // The backend returned an unsuccessful response code.
+            this.notificationService.error(`
+              Server-side error: code ${err.status}, body was: ${err.error}
+            `);
           }
         },
       );
   }
-
 }
 
 interface Post {

@@ -12,6 +12,27 @@
 
 </p>
 <div class="row">
+
+  <div class="col-xl-6 col-sm-12" *ngFor="let post of posts">
+    <pfm-flip-card size="medium">
+      <pfm-card class="card-front" accent="info">
+        <pfm-card-header>{{post.title}}</pfm-card-header>
+        <pfm-card-body>
+          <p>{{post.body}}</p>
+        </pfm-card-body>
+        <pfm-card-footer>{{post.id}}</pfm-card-footer>
+      </pfm-card>
+      <pfm-card class="card-back">
+        <pfm-card-body>
+          back
+        </pfm-card-body>
+      </pfm-card>
+    </pfm-flip-card>
+  </div>
+
+
+
+
   <div class="col-xl-6 col-sm-12">
     <pfm-reveal-card>
       <pfm-card class="card-front" accent="warning">
@@ -35,26 +56,6 @@
         </pfm-card-body>
       </pfm-card>
     </pfm-reveal-card>
-  </div>
-  <div class="col-xl-6 col-sm-12">
-    <pfm-flip-card size="medium">
-      <pfm-card class="card-front" accent="info">
-        <pfm-card-header>Flip Card</pfm-card-header>
-        <pfm-card-body>
-          <p>some text</p>
-          <p>some text</p>
-          <p>some text</p>
-          <p>some text</p>
-          <p>some text</p>
-        </pfm-card-body>
-        <pfm-card-footer>footer</pfm-card-footer>
-      </pfm-card>
-      <pfm-card class="card-back">
-        <pfm-card-body>
-          back
-        </pfm-card-body>
-      </pfm-card>
-    </pfm-flip-card>
   </div>
 
   <div class="col-xl-6 col-sm-12">
