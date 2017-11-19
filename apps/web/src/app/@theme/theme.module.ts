@@ -2,8 +2,6 @@ import { ModuleWithProviders, NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 
-import { FullscreenModule } from '@app/fullscreen';
-
 import {
   NbActionsModule,
   NbCardModule,
@@ -24,6 +22,7 @@ import {
   SearchInputComponent,
   ThemeSettingsComponent,
 } from './components';
+import { ToggleFullscreenDirective } from './directives';
 import { CapitalizePipe, PluralPipe, RoundPipe, TimingPipe } from './pipes';
 import {
   OneColumnLayoutComponent,
@@ -34,7 +33,7 @@ import {
 import { DEFAULT_THEME } from './styles/theme.default';
 import { COSMIC_THEME } from './styles/theme.cosmic';
 
-const BASE_MODULES = [CommonModule, FormsModule, ReactiveFormsModule, FullscreenModule];
+const BASE_MODULES = [CommonModule, FormsModule, ReactiveFormsModule];
 
 const NB_MODULES = [
   NbCardModule,
@@ -60,6 +59,8 @@ const COMPONENTS = [
   TwoColumnsLayoutComponent,
 ];
 
+const DIRECTIVES = [ ToggleFullscreenDirective ];
+
 const PIPES = [
   CapitalizePipe,
   PluralPipe,
@@ -81,7 +82,7 @@ const NB_THEME_PROVIDERS = [
 @NgModule({
   imports: [...BASE_MODULES, ...NB_MODULES],
   exports: [...BASE_MODULES, ...NB_MODULES, ...COMPONENTS, ...PIPES],
-  declarations: [...COMPONENTS, ...PIPES],
+  declarations: [...COMPONENTS, ...PIPES, ...DIRECTIVES],
 })
 export class ThemeModule {
   static forRoot(): ModuleWithProviders {

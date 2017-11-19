@@ -2,9 +2,9 @@ import { Directive, HostListener } from '@angular/core';
 import * as screenfull from 'screenfull';
 
 @Directive({
-  selector: '[pfmFullscreen]',
+  selector: '[ngxToggleFullscreen]',
 })
-export class FullscreenDirective {
+export class ToggleFullscreenDirective {
   @HostListener('click')
   onClick() {
     if (screenfull.enabled) {

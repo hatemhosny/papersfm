@@ -52,12 +52,6 @@
       "appRoot": ""
     },
     {
-      "name": "fullscreen",
-      "root": "libs/fullscreen/src",
-      "test": "../../../test.js",
-      "appRoot": ""
-    },
-    {
       "name": "log",
       "root": "libs/log/src",
       "test": "../../../test.js",
