@@ -1,5 +1,6 @@
 import { NgModule } from '@angular/core';
 import { RouterModule } from '@angular/router';
+import { HttpClientModule } from '@angular/common/http';
 
 import { ThemeModule } from '../@theme/theme.module';
 
@@ -21,6 +22,7 @@ import { SvgIconModule } from '@app/svg-icon';
     CardsModule,
     BreadcrumbsComponent,
     SvgIconModule,
+    HttpClientModule,
   ],
 })
 export class SharedModule { }
