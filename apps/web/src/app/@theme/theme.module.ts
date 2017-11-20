@@ -22,6 +22,7 @@ import {
   SearchInputComponent,
   ThemeSettingsComponent,
 } from './components';
+import { ToggleFullscreenDirective } from './directives';
 import { CapitalizePipe, PluralPipe, RoundPipe, TimingPipe } from './pipes';
 import {
   OneColumnLayoutComponent,
@@ -58,6 +59,8 @@ const COMPONENTS = [
   TwoColumnsLayoutComponent,
 ];
 
+const DIRECTIVES = [ ToggleFullscreenDirective ];
+
 const PIPES = [
   CapitalizePipe,
   PluralPipe,
@@ -79,7 +82,7 @@ const NB_THEME_PROVIDERS = [
 @NgModule({
   imports: [...BASE_MODULES, ...NB_MODULES],
   exports: [...BASE_MODULES, ...NB_MODULES, ...COMPONENTS, ...PIPES],
-  declarations: [...COMPONENTS, ...PIPES],
+  declarations: [...COMPONENTS, ...PIPES, ...DIRECTIVES],
 })
 export class ThemeModule {
   static forRoot(): ModuleWithProviders {
