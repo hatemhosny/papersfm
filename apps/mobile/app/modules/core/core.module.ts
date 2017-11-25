@@ -10,9 +10,9 @@ import { ITEMS_PROVIDERS } from '../items/services';
 @NgModule({
   imports: [
     TNSFontIconModule.forRoot({
-      fa: './assets/font-awesome.min.css'
-    })
+      fa: './assets/font-awesome.min.css',
+    }),
   ],
-  providers: [...CORE_PROVIDERS, ...ITEMS_PROVIDERS]
+  providers: [...CORE_PROVIDERS, ...ITEMS_PROVIDERS],
 })
 export class CoreModule {}

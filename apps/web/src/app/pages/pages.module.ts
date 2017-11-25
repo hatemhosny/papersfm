@@ -8,17 +8,8 @@ import { DashboardModule } from './dashboard/dashboard.module';
 import { SharedModule } from '../@shared/shared.module';
 
 @NgModule({
-  imports: [
-    PagesRoutingModule,
-    ThemeModule,
-    DashboardModule,
-    SharedModule,
-  ],
-  declarations: [
-    PagesComponent,
-    HomeComponent,
-  ],
-  schemas: [ CUSTOM_ELEMENTS_SCHEMA ],
+  imports: [PagesRoutingModule, ThemeModule, DashboardModule, SharedModule],
+  declarations: [PagesComponent, HomeComponent],
+  schemas: [CUSTOM_ELEMENTS_SCHEMA],
 })
-export class PagesModule {
-}
+export class PagesModule {}

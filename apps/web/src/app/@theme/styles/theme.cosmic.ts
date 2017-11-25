@@ -2,14 +2,7 @@ export const COSMIC_THEME = {
   name: 'cosmic',
   base: 'default',
   variables: {
-
-    temperature: [
-      '#2ec7fe',
-      '#31ffad',
-      '#7bff24',
-      '#fff024',
-      '#f7bd59',
-    ],
+    temperature: ['#2ec7fe', '#31ffad', '#7bff24', '#fff024', '#f7bd59'],
 
     solar: {
       gradientLeft: '#7bff24',
@@ -22,7 +15,8 @@ export const COSMIC_THEME = {
       colorBlack: '#000000',
       tooltipBg: 'rgba(0, 255, 170, 0.35)',
       tooltipBorderColor: '#00d977',
-      tooltipExtraCss: 'box-shadow: 0px 2px 46px 0 rgba(0, 255, 170, 0.35); border-radius: 10px; padding: 4px 16px;',
+      tooltipExtraCss:
+        'box-shadow: 0px 2px 46px 0 rgba(0, 255, 170, 0.35); border-radius: 10px; padding: 4px 16px;',
       tooltipTextColor: '#ffffff',
       tooltipFontWeight: 'normal',
 
@@ -42,7 +36,8 @@ export const COSMIC_THEME = {
       tooltipLineColor: 'rgba(255, 255, 255, 0.1)',
       tooltipLineWidth: '1',
       tooltipBorderColor: '#00d977',
-      tooltipExtraCss: 'box-shadow: 0px 2px 46px 0 rgba(0, 255, 170, 0.35); border-radius: 10px; padding: 8px 24px;',
+      tooltipExtraCss:
+        'box-shadow: 0px 2px 46px 0 rgba(0, 255, 170, 0.35); border-radius: 10px; padding: 8px 24px;',
       tooltipTextColor: '#ffffff',
       tooltipFontWeight: 'normal',
 

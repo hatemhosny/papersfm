@@ -5,12 +5,7 @@ import { PapersComponent } from './papers.component';
 import { PaperListComponent } from './paper-list/paper-list.component';
 
 @NgModule({
-  imports: [
-    PapersRoutingModule,
-  ],
-  declarations: [
-    PapersComponent,
-    PaperListComponent,
-  ],
+  imports: [PapersRoutingModule],
+  declarations: [PapersComponent, PaperListComponent],
 })
-export class PapersModule { }
+export class PapersModule {}

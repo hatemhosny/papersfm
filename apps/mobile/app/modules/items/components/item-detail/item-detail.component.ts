@@ -9,7 +9,7 @@ import { ItemService } from '../../services/item.service';
 @Component({
   selector: 'ns-details',
   moduleId: module.id,
-  templateUrl: './item-detail.component.html'
+  templateUrl: './item-detail.component.html',
 })
 export class ItemDetailComponent implements OnInit {
   item: Item;

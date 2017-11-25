@@ -16,10 +16,7 @@ export class BreadcrumbsComponent implements OnInit, OnChanges, OnDestroy {
   public _urls: string[];
   public _routerSubscription: any;
 
-  constructor(
-    private router: Router,
-    private breadcrumbService: BreadcrumbsService,
-  ) { }
+  constructor(private router: Router, private breadcrumbService: BreadcrumbsService) {}
 
   ngOnInit(): void {
     this._urls = new Array();
@@ -29,31 +26,32 @@ export class BreadcrumbsComponent implements OnInit, OnChanges, OnDestroy {
     }
 
     this._routerSubscription = this.router.events.subscribe((navigationEnd: NavigationEnd) => {
-
       if (navigationEnd instanceof NavigationEnd) {
         this._urls.length = 0; // Fastest way to clear out array
-        this.generateBreadcrumbTrail(navigationEnd.urlAfterRedirects ? navigationEnd.urlAfterRedirects : navigationEnd.url);
+        this.generateBreadcrumbTrail(
+          navigationEnd.urlAfterRedirects ? navigationEnd.urlAfterRedirects : navigationEnd.url,
+        );
 
         this.hideIfNoBreadcrumbs();
       }
     });
 
-    breadcrumbsConfig.names.forEach((item) => {
+    breadcrumbsConfig.names.forEach(item => {
       this.breadcrumbService.addFriendlyNameForRoute(item.route, item.name);
     });
-    breadcrumbsConfig.regexNames.forEach((item) => {
+    breadcrumbsConfig.regexNames.forEach(item => {
       this.breadcrumbService.addFriendlyNameForRouteRegex(item.route, item.name);
     });
-    breadcrumbsConfig.hide.forEach((item) => {
+    breadcrumbsConfig.hide.forEach(item => {
       this.breadcrumbService.hideRoute(item.route);
     });
-    breadcrumbsConfig.regexHide.forEach((item) => {
+    breadcrumbsConfig.regexHide.forEach(item => {
       this.breadcrumbService.hideRouteRegex(item.route);
     });
-    breadcrumbsConfig.noBreadcrumbs.forEach((item) => {
+    breadcrumbsConfig.noBreadcrumbs.forEach(item => {
       this.breadcrumbService.removeBreadcrumbsRoute(item.route);
     });
-    breadcrumbsConfig.regexNoBreadcrumbs.forEach((item) => {
+    breadcrumbsConfig.regexNoBreadcrumbs.forEach(item => {
       this.breadcrumbService.removeBreadcrumbsRouteRegex(item.route);
     });
 
@@ -104,5 +102,4 @@ export class BreadcrumbsComponent implements OnInit, OnChanges, OnDestroy {
       this.isHidden = false;
     }
   }
-
 }

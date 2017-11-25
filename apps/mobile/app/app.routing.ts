@@ -12,15 +12,15 @@ const routes: Routes = [
   {
     path: '',
     redirectTo: '/items',
-    pathMatch: 'full'
+    pathMatch: 'full',
   },
   {
     path: 'items',
-    loadChildren: './modules/items/items.module#ItemsModule'
-  }
+    loadChildren: './modules/items/items.module#ItemsModule',
+  },
 ];
 
 @NgModule({
-  imports: [SharedModule, NativeScriptRouterModule.forRoot(routes)]
+  imports: [SharedModule, NativeScriptRouterModule.forRoot(routes)],
 })
 export class AppRoutingModule {}

@@ -7,7 +7,6 @@ import { NbThemeService } from '@nebular/theme';
   templateUrl: './kitten.component.html',
 })
 export class KittenComponent implements OnDestroy {
-
   currentTheme: string;
   themeSubscription: any;
 

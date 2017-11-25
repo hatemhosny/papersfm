@@ -17,7 +17,7 @@ type DocPredicate<T> = string | AngularFirestoreDocument<T>;
 
 @Injectable()
 export class DataAccessService {
-  constructor(public afs: AngularFirestore) { }
+  constructor(public afs: AngularFirestore) {}
   /// **************
   /// Get a Reference
   /// **************
@@ -31,24 +31,30 @@ export class DataAccessService {
   /// Get Data
   /// **************
   doc$<T>(ref: DocPredicate<T>): Observable<T> {
-    return this.doc(ref).snapshotChanges().map(doc => {
-      return doc.payload.data() as T;
-    });
+    return this.doc(ref)
+      .snapshotChanges()
+      .map(doc => {
+        return doc.payload.data() as T;
+      });
   }
   col$<T>(ref: CollectionPredicate<T>, queryFn?): Observable<T[]> {
-    return this.col(ref, queryFn).snapshotChanges().map(docs => {
-      return docs.map(a => a.payload.doc.data()) as T[];
-    });
+    return this.col(ref, queryFn)
+      .snapshotChanges()
+      .map(docs => {
+        return docs.map(a => a.payload.doc.data()) as T[];
+      });
   }
   /// with Ids
   colWithIds$<T>(ref: CollectionPredicate<T>, queryFn?): Observable<any[]> {
-    return this.col(ref, queryFn).snapshotChanges().map(actions => {
-      return actions.map(a => {
-        const data = a.payload.doc.data();
-        const id = a.payload.doc.id;
-        return { id, ...data };
+    return this.col(ref, queryFn)
+      .snapshotChanges()
+      .map(actions => {
+        return actions.map(a => {
+          const data = a.payload.doc.data();
+          const id = a.payload.doc.id;
+          return { id, ...data };
+        });
       });
-    });
   }
   /// **************
   /// Write Data
@@ -87,7 +93,10 @@ export class DataAccessService {
   }
   /// If doc exists update, otherwise set
   upsert<T>(ref: DocPredicate<T>, data: any) {
-    const doc = this.doc(ref).snapshotChanges().take(1).toPromise();
+    const doc = this.doc(ref)
+      .snapshotChanges()
+      .take(1)
+      .toPromise();
     return doc.then(snap => {
       return snap.payload.exists ? this.update(ref, data) : this.set(ref, data);
     });
@@ -97,7 +106,8 @@ export class DataAccessService {
   /// **************
   inspectDoc(ref: DocPredicate<any>): void {
     const tick = new Date().getTime();
-    this.doc(ref).snapshotChanges()
+    this.doc(ref)
+      .snapshotChanges()
       .take(1)
       .do(d => {
         const tock = new Date().getTime() - tick;
@@ -107,7 +117,8 @@ export class DataAccessService {
   }
   inspectCol(ref: CollectionPredicate<any>): void {
     const tick = new Date().getTime();
-    this.col(ref).snapshotChanges()
+    this.col(ref)
+      .snapshotChanges()
       .take(1)
       .do(c => {
         const tock = new Date().getTime() - tick;

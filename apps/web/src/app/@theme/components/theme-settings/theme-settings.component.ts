@@ -29,16 +29,13 @@ import { StateService } from '@app/data';
   `,
 })
 export class ThemeSettingsComponent {
-
   layouts = [];
   sidebars = [];
 
   constructor(protected stateService: StateService) {
-    this.stateService.getLayoutStates()
-      .subscribe((layouts: any[]) => this.layouts = layouts);
+    this.stateService.getLayoutStates().subscribe((layouts: any[]) => (this.layouts = layouts));
 
-    this.stateService.getSidebarStates()
-      .subscribe((sidebars: any[]) => this.sidebars = sidebars);
+    this.stateService.getSidebarStates().subscribe((sidebars: any[]) => (this.sidebars = sidebars));
   }
 
   layoutSelect(layout: any): boolean {

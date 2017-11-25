@@ -16,6 +16,7 @@ export class HomeComponent implements OnInit {
   posts: Post[];
 
 <<<<<<< HEAD
+<<<<<<< HEAD
   constructor(private notificationService: NotificationService, private http: HttpClient) {}
 =======
   constructor(
@@ -23,6 +24,9 @@ export class HomeComponent implements OnInit {
     private http: HttpClient,
   ) {}
 >>>>>>> http demo
+=======
+  constructor(private notificationService: NotificationService, private http: HttpClient) {}
+>>>>>>> format files
 
   ngOnInit() {
     this.environmentName = environment.name;

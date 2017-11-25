@@ -12,12 +12,8 @@ import { KittenComponent } from './kitten/kitten.component';
 import { SecurityCamerasComponent } from './security-cameras/security-cameras.component';
 import { PlayerComponent } from './rooms/player/player.component';
 
-
 @NgModule({
-  imports: [
-    ThemeModule,
-    DashboardRoutingModule,
-  ],
+  imports: [ThemeModule, DashboardRoutingModule],
   declarations: [
     DashboardComponent,
     StatusCardComponent,
@@ -30,4 +26,4 @@ import { PlayerComponent } from './rooms/player/player.component';
     PlayerComponent,
   ],
 })
-export class DashboardModule { }
+export class DashboardModule {}

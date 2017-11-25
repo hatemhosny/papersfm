@@ -6,8 +6,6 @@ import { Component, Input, OnInit } from '@angular/core';
   styleUrls: ['./reveal-card.component.scss'],
 })
 export class RevealCardComponent {
-
   @Input() revealed = false;
   @Input() size = 'medium';
-
 }

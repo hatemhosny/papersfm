@@ -6,12 +6,13 @@ describe('PaperListComponent', () => {
   let component: PaperListComponent;
   let fixture: ComponentFixture<PaperListComponent>;
 
-  beforeEach(async(() => {
-    TestBed.configureTestingModule({
-      declarations: [ PaperListComponent ],
-    })
-    .compileComponents();
-  }));
+  beforeEach(
+    async(() => {
+      TestBed.configureTestingModule({
+        declarations: [PaperListComponent],
+      }).compileComponents();
+    }),
+  );
 
   beforeEach(() => {
     fixture = TestBed.createComponent(PaperListComponent);

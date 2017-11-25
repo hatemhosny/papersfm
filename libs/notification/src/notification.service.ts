@@ -14,8 +14,7 @@ const toastType = {
 
 @Injectable()
 export class NotificationService {
-
-  constructor(private toasterService: ToasterService) { }
+  constructor(private toasterService: ToasterService) {}
 
   message(message: string) {
     this.showToast(toastType.default, null, message);
@@ -51,5 +50,4 @@ export class NotificationService {
     };
     this.toasterService.popAsync(toast);
   }
-
 }

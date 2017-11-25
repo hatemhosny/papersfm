@@ -5,10 +5,7 @@ import { Component, OnInit } from '@angular/core';
   template: '<ngx-notification></ngx-notification>',
 })
 export class CoreComponent implements OnInit {
+  constructor() {}
 
-  constructor() { }
-
-  ngOnInit() {
-  }
-
+  ngOnInit() {}
 }
