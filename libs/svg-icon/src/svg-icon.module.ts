@@ -10,5 +10,4 @@ import { SvgIconComponent } from './svg-icon.component';
   declarations: [SvgIconComponent],
   exports: [SvgIconComponent],
 })
-export class SvgIconModule {
-}
+export class SvgIconModule {}

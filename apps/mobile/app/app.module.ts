@@ -18,12 +18,12 @@ import { AppComponent } from './app.component';
     // this allows standard Angular route lazy load syntax across whole project
     {
       provide: NgModuleFactoryLoader,
-      useClass: NSModuleFactoryLoader
-    }
+      useClass: NSModuleFactoryLoader,
+    },
   ],
   declarations: [AppComponent],
   bootstrap: [AppComponent],
-  schemas: [NO_ERRORS_SCHEMA]
+  schemas: [NO_ERRORS_SCHEMA],
 })
 /*
 Pass your application module to the bootstrapModule function located in main.ts to start your app

@@ -4,7 +4,6 @@ import { HttpClientModule } from '@angular/common/http';
 
 import { ToasterModule } from 'angular2-toaster';
 
-
 import { throwIfAlreadyLoaded } from './module-import-guard';
 import { DataModule } from '@app/data';
 import { AnalyticsService } from './utils/analytics.service';
@@ -13,7 +12,6 @@ import { CoreComponent } from './core.component';
 import { LogService } from '@app/log';
 import { NotificationService, NotificationComponent } from '@app/notification';
 import { BreadcrumbsService } from '../@shared/breadcrumbs/breadcrumbs.service';
-
 
 const NB_CORE_PROVIDERS = [
   ...DataModule.forRoot().providers,
@@ -25,29 +23,23 @@ const NB_CORE_PROVIDERS = [
 ];
 
 @NgModule({
-  imports: [
-    ToasterModule,
-    HttpClientModule,
-  ],
-  exports: [
-    CoreComponent,
-  ],
-  declarations: [
-    NotificationComponent,
-    CoreComponent,
-  ],
+  imports: [ToasterModule, HttpClientModule],
+  exports: [CoreComponent],
+  declarations: [NotificationComponent, CoreComponent],
 })
 export class CoreModule {
-  constructor(@Optional() @SkipSelf() parentModule: CoreModule) {
+  constructor(
+    @Optional()
+    @SkipSelf()
+    parentModule: CoreModule,
+  ) {
     throwIfAlreadyLoaded(parentModule, 'CoreModule');
   }
 
   static forRoot(): ModuleWithProviders {
     return <ModuleWithProviders>{
       ngModule: CoreModule,
-      providers: [
-        ...NB_CORE_PROVIDERS,
-      ],
+      providers: [...NB_CORE_PROVIDERS],
     };
   }
 }

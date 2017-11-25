@@ -8,9 +8,7 @@ import { Component, Input, OnInit, ViewContainerRef } from '@angular/core';
   styleUrls: ['./card.component.scss'],
 })
 export class CardComponent {
-
   @Input() size = '';
   @Input() status = '';
   @Input() accent = '';
-
 }

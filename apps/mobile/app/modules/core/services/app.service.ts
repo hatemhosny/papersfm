@@ -37,7 +37,7 @@ export class AppService {
     private _ngRouter: Router,
     private _ngZone: NgZone,
     // ensures font icon's are initialized on app boot
-    private _fonticon: TNSFontIconService
+    private _fonticon: TNSFontIconService,
   ) {
     // initialize core services
     this._initAppVersion();
@@ -72,7 +72,9 @@ export class AppService {
     let buildNumber: string;
 
     if (tnsApp.android) {
-      const pi = tnsApp.android.context.getPackageManager().getPackageInfo(tnsApp.android.context.getPackageName(), 0);
+      const pi = tnsApp.android.context
+        .getPackageManager()
+        .getPackageInfo(tnsApp.android.context.getPackageName(), 0);
       versionName = pi.versionName;
       buildNumber = pi.versionCode.toString();
     } else if (tnsApp.ios) {
@@ -140,16 +142,14 @@ const getOrientation = function() {
 };
 
 const getContext = function() {
-  const ctx = java.lang.Class
-    .forName('android.app.AppGlobals')
+  const ctx = java.lang.Class.forName('android.app.AppGlobals')
     .getMethod('getInitialApplication', null)
     .invoke(null, null);
   if (ctx) {
     return ctx;
   }
 
-  return java.lang.Class
-    .forName('android.app.ActivityThread')
+  return java.lang.Class.forName('android.app.ActivityThread')
     .getMethod('currentApplication', null)
     .invoke(null, null);
 };

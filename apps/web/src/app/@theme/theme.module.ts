@@ -59,21 +59,16 @@ const COMPONENTS = [
   TwoColumnsLayoutComponent,
 ];
 
-const DIRECTIVES = [ ToggleFullscreenDirective ];
+const DIRECTIVES = [ToggleFullscreenDirective];
 
-const PIPES = [
-  CapitalizePipe,
-  PluralPipe,
-  RoundPipe,
-  TimingPipe,
-];
+const PIPES = [CapitalizePipe, PluralPipe, RoundPipe, TimingPipe];
 
 const NB_THEME_PROVIDERS = [
   ...NbThemeModule.forRoot(
     {
       name: 'default',
     },
-    [ DEFAULT_THEME, COSMIC_THEME ],
+    [DEFAULT_THEME, COSMIC_THEME],
   ).providers,
   ...NbSidebarModule.forRoot().providers,
   ...NbMenuModule.forRoot().providers,

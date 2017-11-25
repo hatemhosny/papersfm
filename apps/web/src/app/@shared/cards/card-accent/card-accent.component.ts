@@ -1,4 +1,4 @@
-import { Component, Input} from '@angular/core';
+import { Component, Input } from '@angular/core';
 
 @Component({
   selector: 'pfm-card-accent',
@@ -6,8 +6,6 @@ import { Component, Input} from '@angular/core';
   styleUrls: ['./card-accent.component.scss'],
 })
 export class CardAccentComponent {
-
   @Input() type = '';
   @Input() color = '';
-
 }

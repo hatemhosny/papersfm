@@ -10,25 +10,32 @@ import { ToasterConfig, ToasterService, ToasterModule } from 'angular2-toaster';
   `,
 })
 export class NotificationComponent implements OnInit {
-
   config: ToasterConfig;
 
-    position = 'toast-top-right';
-    animationType = 'fade';
-    timeout = 50000;
-    toastsLimit = 5;
+  position = 'toast-top-right';
+  animationType = 'fade';
+  timeout = 50000;
+  toastsLimit = 5;
 
-    isNewestOnTop = true;
-    isHideOnClick = true;
-    isDuplicatesPrevented = false;
-    isCloseButton = false;
+  isNewestOnTop = true;
+  isHideOnClick = true;
+  isDuplicatesPrevented = false;
+  isCloseButton = false;
 
-    animations = ['fade', 'flyLeft', 'flyRight', 'slideDown', 'slideUp'];
-    positions = ['toast-top-full-width', 'toast-bottom-full-width', 'toast-top-left', 'toast-top-center',
-    'toast-top-right', 'toast-bottom-right', 'toast-bottom-center', 'toast-bottom-left', 'toast-center'];
+  animations = ['fade', 'flyLeft', 'flyRight', 'slideDown', 'slideUp'];
+  positions = [
+    'toast-top-full-width',
+    'toast-bottom-full-width',
+    'toast-top-left',
+    'toast-top-center',
+    'toast-top-right',
+    'toast-bottom-right',
+    'toast-bottom-center',
+    'toast-bottom-left',
+    'toast-center',
+  ];
 
-
-  constructor() { }
+  constructor() {}
 
   ngOnInit() {
     this.config = new ToasterConfig({
@@ -40,7 +47,5 @@ export class NotificationComponent implements OnInit {
       animation: this.animationType,
       limit: this.toastsLimit,
     });
-
   }
-
 }

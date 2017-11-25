@@ -19,7 +19,6 @@ export interface LogObject {
 
 @Injectable()
 export class LogService extends ErrorHandler {
-
   private defaultLog: LogObject = {
     message: 'An error has occured! An error report has been sent.',
     notify: false,
@@ -72,7 +71,6 @@ export class LogService extends ErrorHandler {
    * otherwise, it sends logs to server
    */
   private log(logObj: LogObject, logLevel: LogLevel): void {
-
     // set defaults for unspecified log parameters
     logObj = Object.assign({}, this.defaultLog, logObj);
 
@@ -85,7 +83,8 @@ export class LogService extends ErrorHandler {
         case LogLevel.WARNING:
           this.notification.warning(logObj.message);
           break;
-        default:  // logLevel.info
+        default:
+          // logLevel.info
           this.notification.info(logObj.message);
       }
     }
@@ -101,7 +100,6 @@ export class LogService extends ErrorHandler {
       },
     };
 
-
     // if in production, send to Sentry.io
     if (environment.production === true) {
       if (logObj.error) {
@@ -112,11 +110,9 @@ export class LogService extends ErrorHandler {
     }
 
     if (logObj.error) {
-      super.handleError(logObj.error);   // use angular error handler
+      super.handleError(logObj.error); // use angular error handler
     } else if (environment.production === false) {
-      console.log(logObj.message);       // if in development, log messages to console
+      console.log(logObj.message); // if in development, log messages to console
     }
-
   }
-
 }

@@ -6,8 +6,6 @@ import { Component, Input } from '@angular/core';
   styleUrls: ['./flip-card.component.scss'],
 })
 export class FlipCardComponent {
-
   @Input() flipped = false;
   @Input() size = 'medium';
-
 }

@@ -35,7 +35,8 @@
     "docs:serve": "compodoc -p src/tsconfig.app.json -d docs -s",
     "firebase": "firebase",
     "conventional-changelog": "conventional-changelog",
-    "release:changelog": "npm run conventional-changelog -- -p angular -i CHANGELOG.md -s"
+    "release:changelog": "npm run conventional-changelog -- -p angular -i CHANGELOG.md -s",
+    "format": "prettier \"{apps,libs}/**/*.ts\" --write --ignore-path ./.gitignore"
   },
   "private": true,
   "dependencies": {
@@ -65,6 +66,7 @@
     "nebular-icons": "^1.0.6",
     "ng-inline-svg": "^5.0.0",
     "pace-js": "^1.0.2",
+    "prettier": "^1.8.2",
     "raven-js": "^3.20.1",
     "roboto-fontface": "^0.8.0",
     "rxjs": "^5.5.2",

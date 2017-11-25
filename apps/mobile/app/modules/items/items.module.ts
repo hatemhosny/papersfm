@@ -11,17 +11,17 @@ import { COMPONENTS, ItemsComponent, ItemDetailComponent } from './components';
 export const routes: Routes = [
   {
     path: '',
-    component: ItemsComponent
+    component: ItemsComponent,
   },
   {
     path: ':id',
-    component: ItemDetailComponent
-  }
+    component: ItemDetailComponent,
+  },
 ];
 
 @NgModule({
   imports: [SharedModule, NativeScriptRouterModule.forChild(routes)],
   declarations: [...COMPONENTS],
-  schemas: [NO_ERRORS_SCHEMA]
+  schemas: [NO_ERRORS_SCHEMA],
 })
 export class ItemsModule {}

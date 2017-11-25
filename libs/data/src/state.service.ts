@@ -6,7 +6,6 @@ import 'rxjs/add/observable/of';
 
 @Injectable()
 export class StateService {
-
   protected layouts: any = [
     {
       name: 'One Column',

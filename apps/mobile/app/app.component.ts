@@ -5,11 +5,11 @@ import { AppService } from './modules/core/services/app.service';
 
 @Component({
   selector: 'ns-app',
-  templateUrl: 'app.component.html'
+  templateUrl: 'app.component.html',
 })
 export class AppComponent {
   constructor(
     // ensure singleton construction on app boot)
-    private _appService: AppService
+    private _appService: AppService,
   ) {}
 }

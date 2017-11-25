@@ -1,14 +1,10 @@
 export const breadcrumbsConfig = {
   prefix: 'Home',
-  names: [
-    {route: '/papers', name: 'All Papers'},
-  ],
+  names: [{ route: '/papers', name: 'All Papers' }],
   regexNames: [
     // {route: '', name: ''},
   ],
-  hide: [
-    {route: '/home'},
-  ],
+  hide: [{ route: '/home' }],
   regexHide: [
     // {route: ''},
   ],

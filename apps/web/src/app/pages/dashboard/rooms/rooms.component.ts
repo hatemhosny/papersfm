@@ -13,23 +13,21 @@ import { NbThemeService, NbMediaBreakpoint, NbMediaBreakpointsService } from '@n
   `,
 })
 export class RoomsComponent implements OnDestroy {
-
-  @HostBinding('class.expanded')
-  private expanded: boolean;
+  @HostBinding('class.expanded') private expanded: boolean;
   private selected: number;
 
   breakpoint: NbMediaBreakpoint;
   breakpoints: any;
   themeSubscription: any;
 
-  constructor(private themeService: NbThemeService,
-              private breakpointService: NbMediaBreakpointsService) {
-
+  constructor(
+    private themeService: NbThemeService,
+    private breakpointService: NbMediaBreakpointsService,
+  ) {
     this.breakpoints = breakpointService.getBreakpointsMap();
-    this.themeSubscription = themeService.onMediaQueryChange()
-      .subscribe(([oldValue, newValue]) => {
-        this.breakpoint = newValue;
-      });
+    this.themeSubscription = themeService.onMediaQueryChange().subscribe(([oldValue, newValue]) => {
+      this.breakpoint = newValue;
+    });
   }
 
   select(roomNumber) {

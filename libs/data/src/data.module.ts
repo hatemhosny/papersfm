@@ -6,28 +6,17 @@ import { StateService } from './state.service';
 import { PlayerService } from './player.service';
 import { DataAccessService } from './data-access.service';
 
-const SERVICES = [
-  UserService,
-  StateService,
-  PlayerService,
-  DataAccessService,
-];
+const SERVICES = [UserService, StateService, PlayerService, DataAccessService];
 
 @NgModule({
-  imports: [
-    CommonModule,
-  ],
-  providers: [
-    ...SERVICES,
-  ],
+  imports: [CommonModule],
+  providers: [...SERVICES],
 })
 export class DataModule {
   static forRoot(): ModuleWithProviders {
     return <ModuleWithProviders>{
       ngModule: DataModule,
-      providers: [
-        ...SERVICES,
-      ],
+      providers: [...SERVICES],
     };
   }
 }

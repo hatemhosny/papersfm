@@ -9,20 +9,8 @@ import { BreadcrumbsComponent } from './breadcrumbs/breadcrumbs.component';
 import { SvgIconModule } from '@app/svg-icon';
 
 @NgModule({
-  imports: [
-    RouterModule,
-    ThemeModule,
-    CardsModule,
-  ],
-  declarations: [
-    BreadcrumbsComponent,
-  ],
-  exports: [
-    RouterModule,
-    CardsModule,
-    BreadcrumbsComponent,
-    SvgIconModule,
-    HttpClientModule,
-  ],
+  imports: [RouterModule, ThemeModule, CardsModule],
+  declarations: [BreadcrumbsComponent],
+  exports: [RouterModule, CardsModule, BreadcrumbsComponent, SvgIconModule, HttpClientModule],
 })
-export class SharedModule { }
+export class SharedModule {}

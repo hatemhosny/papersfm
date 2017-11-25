@@ -36,7 +36,7 @@ export class ItemService {
     { id: 22, name: 'Aleix Vidal', role: 'Midfielder' },
     { id: 23, name: 'Umtiti', role: 'Defender' },
     { id: 24, name: 'Mathieu', role: 'Defender' },
-    { id: 25, name: 'Masip', role: 'Goalkeeper' }
+    { id: 25, name: 'Masip', role: 'Goalkeeper' },
   );
 
   getItems(): Item[] {
